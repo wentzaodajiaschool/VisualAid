@@ -193,7 +193,7 @@ button i {
 }
 
 #pipButton {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	position: fixed;
 	bottom: 70px;  /* 調整位置以使其位於toggleControlsButton上方 */
 	right: 10px;
