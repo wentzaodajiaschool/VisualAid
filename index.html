@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title文藻美語實物投影</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+	<div class="eventNameContainer">
+		<input type="hidden" id="eventNameSize" value="32">
+		<div id="eventName" contenteditable="true">🪲引蟲入識<span class="resizeHandle"></span></div>
+	</div>
+
+    <div class="video-container">
+        <video id="video" width="640" height="480" autoplay muted></video>
+		<div class="controls-container">
+			<div class="controls">
+				<div class="resize-group">
+					<button onclick="toggleVerticalFlip()"><i class="fas fa-arrows-alt-v"></i></button>
+					<span>鏡頭翻轉</span>
+					<button onclick="toggleCamera()"><i class="fas fa-arrows-alt-h"></i></button>
+				</div>
+				<button class="camera-group"><i class="fas fa-camera"></i><div id="cameraButtons" class="camera-button-group"></div></button>
+				<div class="resize-group">
+					<button onclick="decreasePerspective()"><i class="fas fa-minus"></i></button>
+					<button onclick="defaultPerspective()"><span>梯形修正</span></button>
+					<button onclick="increasePerspective()"><i class="fas fa-plus"></i></button>
+				</div>
+				<div class="resize-group">
+					<button onclick="decreaseFontSize()"><i class="fas fa-minus"></i></button>
+					<span>字幕大小</span>
+					<button onclick="increaseFontSize()"><i class="fas fa-plus"></i></button>
+				</div>
+				<button id="recognitionButton" onclick="toggleRecognition()">
+					<i class="fas fa-microphone"></i> <span class="button-text">開始字幕</span>
+				</button>
+			</div>
+		</div>
+		
+		<button id="toggleControlsButton" onclick="toggleControls(); rotateGear();">
+			<i class="fas fa-cog"></i>
+		</button>
+		<button id="pipButton" onclick="togglePictureInPicture()">
+			<i class="fas fa-clone"></i>
+		</button>
+    </div>
+    <div id="transcript"></div>
+</body>
+</html>
