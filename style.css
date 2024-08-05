@@ -33,15 +33,16 @@ video {
 
 .controls {
 	display: flex;
-	font-size: 1rem;
 	justify-content: space-evenly;
 	width: 100%;
 	position: absolute;
 	bottom: 10px;
 	left: 0;
+	
 }
 
 button, .resize-group {
+	font-size: 0.8rem;
 	flex: 1;
 	margin: 5px;
 	display: flex;
@@ -164,7 +165,7 @@ button i {
 }
 
 #toggleControlsButton {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
@@ -194,7 +195,7 @@ button i {
 }
 
 #pipButton {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	position: fixed;
 	bottom: 70px;  /* 調整位置以使其位於toggleControlsButton上方 */
 	right: 10px;
